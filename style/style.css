@@ -1,0 +1,226 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@font-face {
+    font-family: idroid;
+    src: url('../fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+}
+
+:root{                   /*A pseudo-classe CSS ":root" se equipara à raiz de uma árvore, que por sua vez representa o documento. Aplicado ao HTML, :root representa o elemento <html> e é idêntico ao seletor html, exceto que sua especificidade é mais alta.*/
+    --cor01:#89cda5;
+    --cor02:#83e1ad;
+    --cor03:#3ddc84;   /* -- representa uma variavel*/
+    --cor04:#2fa866;
+    --cor05:#1a5c37;   /*variavel das cores*/
+    --cor06:#063d1e;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;     /*variavel de fontes*/
+    --fonte-destaque: 'Bebas Neue', cursive;
+    --fonte-idroid: 'idroid', cursive;
+
+}
+
+.bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+* { /* O "*" significa uma configuração global, ou seja, afeta todas as tags do meu domento*/
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+body{
+    background-color: var(--cor01);
+    font-family: var(--fonte-padrao);
+}
+
+header{
+    background-image: linear-gradient(to bottom, var(--cor05), var(--cor06)) ;
+    text-align: center;
+    min-height: 135px;
+    padding-top: 35px;
+    
+}
+
+header > h1{
+    font-family: var(--fonte-destaque);
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 3em;
+    padding-left: 10px;
+    padding-top: 10px;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.498);
+    font-weight: normal;
+
+}
+
+header > p{
+    color: white;
+    font-size: 1.2em;
+    font-family: var(--fonte-padrao);
+    max-width: 500px;
+    margin: auto;
+    padding-left: 10px;
+    padding-top: 10px;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.498);
+    padding-bottom: 20px;
+}
+
+nav{
+    background-color: var(--cor06);
+    padding: 10px;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.301);
+}
+
+nav > a{
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 10px;
+    transition-duration: .5s;
+}
+
+nav > a:hover{
+    background-color: var(--cor04);
+    color: var(--cor05);
+
+}
+
+a.externo::after{
+    content: '\00A0\1F517';
+}
+
+main{
+    background-color: white;
+    max-width: 1000px;
+    min-width: 300px;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0px 0px 10px black;
+    border-radius: 0px 0px 10px  10px;
+}
+main  p{
+    margin: 15px 0px;
+    text-indent: 20px;
+    text-align: justify;
+    line-height: 2em;
+    font-size: 1em;
+}
+main strong{
+    color: var(--cor05);
+    text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.212);
+    font-weight: bolder;
+    padding: 4px;
+}
+
+main a{
+    text-decoration: none;
+    color: var(--cor05);
+    font-weight: bold;
+    border-radius: 7px;
+    transition-duration: 0.3s;
+}
+
+main a:hover{
+    background-color: var(--cor05);
+    color: white;
+    padding: 5px;
+    text-decoration: underline;
+}
+main img{
+    width: 100%;
+    
+}
+
+.robo{
+    max-width: 350px;
+    margin: auto;
+    display: block;
+}
+
+main  h1{
+    color: var(--cor05);
+    font-family: var(--fonte-idroid);
+    font-weight: normal;
+    font-size: 1.8em ;
+}
+main  h2{
+    font-family: var(--fonte-idroid);
+    color: white;
+    background-image: linear-gradient(to right, var(--cor04),  rgba(255, 255, 255, 0.358));
+    border-radius: 10px;
+    padding: 5px;
+    font-weight: normal;
+    font-size: 1.4;
+}
+
+.video{
+    background-color: var(--cor05);
+    margin: 0px -20px; 
+    margin-bottom: 30px;  
+    padding: 20px;
+    padding-bottom: 58%;
+
+    position: relative; 
+}
+
+.video > iframe{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+
+}
+
+aside{
+    background-color: var(--cor02);
+    border-radius: 10px;
+    box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.489);
+    padding: 10px;
+}
+aside ul{
+    column-count: 2;
+    list-style-position: inside;
+}
+
+li::marker{
+    content: '✔  ';
+}
+
+aside h3{
+    background-color: var(--cor05);
+    border-radius: 10px 10px 0px 0px;
+    padding: 5px;
+    padding-left: 20px;
+    margin: -10px -10px 0 -10px;
+    color: white;
+}
+
+footer{
+    background-color: var(--cor05);
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+footer a{
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 10px;
+    transition-duration: .2s;
+}
+
+footer a:hover{
+    background-color: black;
+    color: white;
+    padding: 5px;
+    text-decoration: underline;
+}
